@@ -1,69 +1,245 @@
-first_question = 'First Question'
-second_question = 'Second Question'
-third_question = 'Third Question'
+from random import randint
 
-questions = [first_question, second_question, third_question]
+print("Welcome to my quiz!")
 
-first_question = ["Do you like to be alone?"]
 
-second_question = ["Do you like to go out?",
-                   "Do you have friends"]
+def MlAdv():
+    with open("MlAdv.txt", "r") as topic2:
+        score = 0
+        difficultyLevel = input("Choose the difficulty: Easy, Medium or Hard!")
+        questionsForMlAdv = topic2.readlines()
+        if difficultyLevel == "Easy":
+            for y in range(0, 3):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2 or 3):")
+            if userAnswer2 == "3":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 2nd question
+            for y in range(5, 8):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2 or 3):")
+            if userAnswer2 == "2":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 3rd question
+            for y in range(10, 13):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2 or 3):")
+            if userAnswer2 == "3":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 4th question
+            for y in range(15, 18):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2 or 3):")
+            if userAnswer2 == "3":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 5th question
+            for y in range(20, 23):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2 or 3):")
+            if userAnswer2 == "2":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+        elif difficultyLevel == "Medium":
+            for y in range(0, 4):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3 or 4):")
+            if userAnswer2 == "3":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 2nd question
+            for y in range(5, 9):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3 or 4):")
+            if userAnswer2 == "2":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 3rd question
+            for y in range(10, 14):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3 or 4):")
+            if userAnswer2 == "3":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 4th question
+            for y in range(15, 19):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3 or 4):")
+            if userAnswer2 == "3":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 5th question
+            for y in range(20, 24):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3 or 4):")
+            if userAnswer2 == "2":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+        elif difficultyLevel == "Hard":
+            for y in range(0, 5):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3, 4 or 5):")
+            if userAnswer2 == "3":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 2th question
+            for y in range(5, 10):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3, 4 or 5):")
+            if userAnswer2 == "2":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 3rd question
+            for y in range(10, 15):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3, 4 or 5):")
+            if userAnswer2 == "3":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 4th question
+            for y in range(15, 20):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3, 4 or 5):")
+            if userAnswer2 == "3":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+            # 5th question
+            for y in range(20, 25):
+                print(questionsForMlAdv[y].rstrip())
+            userAnswer2 = input("Choose from the following(1, 2, 3, 4 or 5):")
+            if userAnswer2 == "2":
+                print("Correct!\n")
+                with open("Score.txt", "a") as results:
+                    results.write("Correct" + "\n")
+            else:
+                print("incorrect")
+                with open("Score.txt", "a") as results:
+                    results.write("Incorrect" + "\n")
+    calcScore()
 
-third_question = ["Do you like partying?",
-                  "Are you suicidal?",
-                  "Do you like to play video games?",
-                  "Would you like to spend more time with them?"]
-answers = [0,0,0]
 
-q1 = first_question[0]
-print(q1)
-answer1 = int(eval(input("1 for True\n0 for False\nYour answer: ")))
+def calcScore():
+    score = 0
+    with open("Score.txt", "r") as results:
+        scoreCalc = results.readlines()
+        for y in range(0, 5):
+            if scoreCalc[y].rstrip() == "Correct":
+                score = score + 1
 
-answers[0]=answer1
+    percentage = (score / 5) * 100
+    print("The percentage of questions correct is", percentage)
+    if percentage < 40.0:
+        print("You have failed the quiz")
+        with open("reports.txt", "a") as reports:
+            reports.write("\n" + fullUsername + " " + "achieved a grade of fail" + " " + "in the quiz")
+    elif percentage >= 40.0 and percentage <= 60.0:
+        print("You have passed the quiz")
+        with open("reports.txt", "a") as reports:
+            reports.write("\n" + fullUsername + " " + "achieved a grade of pass" + " " + "in the quiz")
+    elif percentage >= 60.0 and percentage <= 80.0:
+        print("You have achieved merit for the quiz")
+        with open("reports.txt", "a") as reports:
+            reports.write("\n" + fullUsername + " " + "achieved a grade of merit" + " " + "in the quiz")
+    elif percentage > 80.0:
+        print("You have achieved distinction for quiz")
+        with open("reports.txt", "a") as reports:
+            reports.write("\n" + fullUsername + " " + "achieved a grade of distinction" + " " + "in the quiz")
+    with open("reports.txt", "a") as reports:
+        reports.write(
+            "\n" + fullUsername + " " + "did the quiz and" + " " + "achieved a score of" + " " + str(score))
+        reports.write(
+            "\n" + fullUsername + " " + "did the quiz and" + " " + "achieved a percentage of" + " " + str(
+                percentage))
+    f = open("Score.txt", "w")
+    f.close()
 
-if answer1 == 0:
-    q2 = second_question[0]
-    print(q2)
-    answer2 = int(eval(input("1 for True\n0 for False\nYour answer: ")))
-elif answer1 == 1:
-    q2 = second_question[1]
-    print(q2)
-    answer2 = int(eval(input("1 for True\n0 for False\nYour answer: ")))
 
-answers[1]=answer2
+with open("useraccount.txt", "w") as userFile:
+    usernamePart1 = input("Enter your name:")
+    while not usernamePart1.isalpha():
+        print("Invalid name, try again")
+        usernamePart1 = input("Enter your name:")
+    usernamePart2 = input("Enter your age:")
+    while not usernamePart2.isdigit():
+        print("try again")
+        usernamePart2 = input("Enter your age:")
+    fullUsername = usernamePart1[:3] + usernamePart2
+    userFile.write("Username:" + fullUsername)
+    with open("reports.txt", "a") as reports:
+        reports.write("\n" + "Username:" + fullUsername)
+    print(fullUsername)
 
-if answer2 == 0 and answer1 == 0:
-    q3 = third_question[0]
-    print(q3)
-    answer3 = int(eval(input("1 for True\n0 for False\nYour answer: ")))
-elif answer2 == 0 and answer1 == 1:
-    q3 = third_question[1]
-    print(q3)
-    answer3 = int(eval(input("1 for True\n0 for False\nYour answer: ")))
-elif answer2 == 1 and answer1 == 0:
-    q3 = third_question[2]
-    print(q3)
-    answer3 = int(eval(input("1 for True\n0 for False\nYour answer: ")))
-elif answer2 == 1 and answer1 == 1:
-    q3 = third_question[3]
-    print(q3)
-    answer3 = int(eval(input("1 for True\n0 for False\nYour answer: ")))
-
-answers[2]=answer3
-
-if answers[0] == 0 and answers[1] == 0 and answers[2] == 0:
-    print("Call your friends and have a small gathering at your house")
-elif answers[0] == 0 and answers[1] == 0 and answers[2] == 1:
-    print("Call your friends and have a small party")
-elif answers[0] == 0 and answers[1] == 1 and answers[2] == 0:
-    print("Try getting a hobby")
-elif answers[0] == 0 and answers[1] == 1 and answers[2] == 1:
-    print("You have an interesting life")
-elif answers[0] == 1 and answers[1] == 0 and answers[2] == 0:
-    print("You should try forcing yourself to spend time with other people")
-elif answers[0] == 1 and answers[1] == 0 and answers[2] == 1:
-    print("Please go get some help, dont kill yourself")
-elif answers[0] == 1 and answers[1] == 1 and answers[2] == 0:
-    print("You enjoy your life, no need to force any friendships")
-elif answers[0] == 1 and answers[1] == 1 and answers[2] == 1:
-    print("Call your friends and have a small party")
+MlAdv()
